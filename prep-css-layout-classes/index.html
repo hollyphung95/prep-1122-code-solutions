@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Layout Classes</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    /* stylelint-disable block-no-empty */
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+        /* Set the max-width property to a value of 992px.
+      Now, add the margin property with the auto value.
+      This will cause the container element to center itself horizontally within the body
+      using any available width of the viewport beyond its 992px width. */
+    .container {
+      max-width: : 992px;
+      margin: auto;
+    }
+
+    /* Assign the width property a value of 100% to ensure each row takes up the full width of the its parent element.
+       Assign the display property a value of flex so that its children line up in a "row". */
+    .row {
+      width: 100%;
+      display: flex;
+    }
+
+    /* Assign the flex-basis property a value
+    which will allow three elements to sit next to each other on a single horizontal line, as in: calc(100% / 3).
+    Assign the padding-left and padding-right properties each a value of 8px
+    so that the contents of each "column" are given some space to breathe. */
+    .column {
+      flex-basis: calc(100% / 3);
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Complete the HTML here -->
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <img src="../prep-css-layout-classes/images/crusade.jpg" alt="image1">
+        <h3>crusade</h3>
+        <p>This is a short paragraph about the film crusade. </p>
+      </div>
+
+      <div class="column">
+        <img src="../prep-css-layout-classes/images/raiders.jpg" alt="image1">
+        <h3>raiders</h3>
+        <p>This is a short paragraph about the film raiders.</p>
+      </div>
+
+      <div class="column">
+        <img src="../prep-css-layout-classes/images/temple.jpg" alt="image1">
+        <h3>temple</h3>
+        <p>This is a short paragraph about the film temple. </p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
